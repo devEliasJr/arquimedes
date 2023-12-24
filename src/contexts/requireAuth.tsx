@@ -1,7 +1,7 @@
 import { Box, CircularProgress } from "@mui/material";
 
 import { useAuthContext } from "./authContext";
-import HomePage from "../Pages/Home";
+import HomePage from "../Pages/LoginPage";
 
 export const RequireAuth = ({ children }: { children: JSX.Element }) => {
   const { user, loadingDashboard } = useAuthContext();

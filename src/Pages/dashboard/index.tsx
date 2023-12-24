@@ -28,7 +28,7 @@ interface Props {
   window?: () => Window;
 }
 
-export default function ResponsiveDrawer(props: Props) {
+export default function DashboardResponsiveDrawer(props: Props) {
   const {
     data: getUsersFromData,
     isLoading,

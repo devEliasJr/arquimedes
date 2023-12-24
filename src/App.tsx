@@ -10,9 +10,11 @@ import SignInPage from "./Pages/SignIn";
 
 import { RequireAuth } from "./contexts/requireAuth";
 import { useAuthContext } from "./contexts/authContext";
-import Dashboard from "./Pages/Dashboard";
+
 import Register from "./Pages/Register";
-import HomePage from "./Pages/Home";
+import HomePage from "./Pages/LoginPage";
+import DashboardResponsiveDrawer from "./Pages/dashboard";
+import Home from "./Pages/Home";
 
 export default function App() {
   const auth = useAuthContext();
@@ -21,8 +23,11 @@ export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<DefaultLayout />}>
+        
+        <Route index element={<Home />} />
+
         <Route
-          index
+          path="/login"
           element={!user ? <HomePage /> : <Navigate to="/dashboard" />}
         />
 
@@ -30,7 +35,7 @@ export default function App() {
           path="/dashboard"
           element={
             <RequireAuth>
-              <Dashboard />
+              <DashboardResponsiveDrawer />
             </RequireAuth>
           }
         />
