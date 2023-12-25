@@ -4,7 +4,7 @@ import { useTheme } from "@emotion/react";
 import DefaultPageStructure from "../../../../components/defaultPageStrucuture";
 import ReusableProductCard from "../cardProductPriceStart/cardProductPriceStart";
 import products from "../cardProductPriceStart/mockProducts";
-import ProductCarousel from "../cardProductPriceStart/productCaarrousel";
+import ProductCarousel from "../cardProductPriceStart/productCarrousel";
 
 const produtos = [
   {

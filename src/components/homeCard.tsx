@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 
 export default function HomeCard() {
   return (
-    <Box bgcolor={"white"} maxWidth={350} maxHeight={420} p={2}>
+    <Box bgcolor={"white"} maxWidth={350} maxHeight={420} p={2} sx={{cursor: 'pointer'}}>
       <Typography variant="h5" color={"black"} fontWeight={"600"} fontSize={
         {
           xs: "1.1rem",
