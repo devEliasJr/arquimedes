@@ -2,6 +2,9 @@ import { Box, Grid, useMediaQuery } from "@mui/material";
 import HomeCard from "../../../../components/homeCard";
 import { useTheme } from "@emotion/react";
 import DefaultPageStructure from "../../../../components/defaultPageStrucuture";
+import ReusableProductCard from "../cardProductPriceStart/cardProductPriceStart";
+import products from "../cardProductPriceStart/mockProducts";
+import ProductCarousel from "../cardProductPriceStart/productCaarrousel";
 
 const produtos = [
   {
@@ -24,36 +27,6 @@ const produtos = [
     imagem: "https://via.placeholder.com/150",
     preco: 39.99,
   },
-  {
-    nome: "Produto 5",
-    imagem: "https://via.placeholder.com/150",
-    preco: 24.99,
-  },
-  {
-    nome: "Produto 6",
-    imagem: "https://via.placeholder.com/150",
-    preco: 49.99,
-  },
-  {
-    nome: "Produto 7",
-    imagem: "https://via.placeholder.com/150",
-    preco: 9.99,
-  },
-  {
-    nome: "Produto 8",
-    imagem: "https://via.placeholder.com/150",
-    preco: 34.99,
-  },
-  {
-    nome: "Produto 9",
-    imagem: "https://via.placeholder.com/150",
-    preco: 22.99,
-  },
-  {
-    nome: "Produto 10",
-    imagem: "https://via.placeholder.com/150",
-    preco: 59.99,
-  },
 ];
 
 export default function GridProducts() {
@@ -66,6 +39,8 @@ export default function GridProducts() {
           </Grid>
         ))}
       </Grid>
+
+      <ProductCarousel products={products}/>
     </DefaultPageStructure>
   );
 }
